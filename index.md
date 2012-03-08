@@ -1,6 +1,11 @@
 ---
 layout: page
-title: SourceNinja Documentation
+title: Documentation
 ---
 
-[Heroku Add-On](http://localhost:4000/heroku-addon.html)
+Below are tutorials on how to integrate SourceNinja into your application and begin keeping your packages up-to-date.
+
+[Heroku Add-On](/heroku-addon.html)
+
+[Splinter Gem](/splinter-sourceninja-gem.html)
+

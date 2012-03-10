@@ -1,3 +1,8 @@
+---
+layout: page
+title: SourceNinja Heroku Add-On
+---
+
 [SourceNinja](http://addons.heroku.com/sourceninja) is an easy way to manage the open source software that your application uses.
 
 SourceNinja keeps you aware of updates to the open source software you use. Additionally, SourceNinja creates a hosted attribution page for your application.

@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+	<head>
+	  {% if page.title %}
+	  		<title>{{ page.title }} | SourceNinja Documentation</title>
+		{% else %}
+			<title>SourceNinja Documentation</title>
+		{% endif %}
+
+		<link rel="stylesheet" href="/assets/sourceninja-bootstrap.css" type="text/css" media="screen" title="no title" charset="utf-8">
+	</head>
+    
+	<body>
+		<!-- Header -->
+		<div class="navbar">
+  		<div class="navbar-inner">
+    		<div class="container">
+    			<ul class="nav">
+    				<a class="brand" href="index.html"><img src="http://www.sourceninja.com/images/logo.png" alt="" /></a>
+						<li><a href="https://app.sourceninja.com/packages">Packages</a></li>
+					  <li><a href="https://app.sourceninja.com/contact">Contact</a></li>
+					</ul>
+					<ul class="nav pull-right">
+            <li><a href="https://app.sourceninja.com/d/users/sign_in">Login</a>
+            <li><a href="http://www.sourceninja.com/sign-up.html">Sign Up</a></li>
+          </ul>
+    		</div>
+  		</div>
+		</div> <!-- navbar -->
+
+
+		<!-- Content -->
+		<div class="content">
+			<div class="container">
+		  	<p>{{ content }}</p>
+		  </div>
+		</div>
+
+		<!-- Footer -->
+    <hr/>
+	<footer class="bottom-bar">
+      <div class="bottombar-inner">
+      	<div class="container">
+	        <ul class="nav">
+	          <li><a href ="http://blog.sourceninja.com/">Blog</a></li>
+	          <li><a href ="https://app.sourceninja.com/packages">Packages</a></li>
+	          <li><a href ="https://app.sourceninja.com/contact">Contact</a></li>
+	          <li><a href ="https://app.sourceninja.com/tos">Terms</a></li>
+	          <li><a href ="jobs.html">Jobs</a></li>
+	        </ul>
+	        <!-- <ul class="social-buttons">
+	          <li>Follow with</li>
+	          <li><a href="https://twitter.com/#!/SourceNinja" class="twitter"></a></li>
+	          <li><a href="http://www.facebook.com/SourceNinja" class="facebook"></a></li>
+	        </ul> -->
+    	</div>
+      </div>
+    </footer>
+
+	</body>
+</html>

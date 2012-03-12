@@ -47,50 +47,6 @@ Update application dependencies with bundler.
 
 The gem automatically disables the pushing of development and testing data to SourceNinja. This way the data received about gems will only refer to production data. In doing this, SourceNinja always reflects what gems are used in production.
 
-### Deploy changes
-
-Deploy the SourceNinja configuration to Heroku:
-
-    :::term
-    $ git add config/sourceninja.rb
-    $ git commit -a -m "Adding sourceninja config"
-    $ git push heroku master
-    …
-    -----> Heroku receiving push
-    -----> Launching... done, v3
-           http://warm-frost-1289.herokuapp.com deployed to Heroku
-
-    To git@heroku.com:warm-frost-1289.git
-     * [new branch]      master -> master
-
-Configuration of the add-on can be confirmed by running:
-
-    :::term
-    $ heroku run confirmation command
-
-[[On Heroku, configuration is managed via configuration variables. Please update client libraries to follow this pattern. No configuration files with sensitive information should ever be required within the application source and required config values should be read in from the ENV by supported libraries.]]
-
-### Feature 1
-
-[[Describe how to use/integrate feature 1 from Ruby on Rails]]
-
-### Feature 2
-
-[[Describe how to use/integrate feature 2 from Ruby on Rails]]
-
-## Monitoring & Logging
-
-Stats and the current state of SourceNinja can be displayed via the CLI.
-
-    :::term
-    $ heroku sourceninja:command
-    example output
-
-SourceNinja activity can be observed within the Heroku log-stream by [[describe add-on logging recognition, if any]].
-
-    :::term
-    $ heroku logs -t | grep 'sourceninja pattern'
-
 ## Dashboard
 
 For more information on the features available within the SourceNinja dashboard please see the docs at [sourceninja.com/docs](http://sourceninja.com/docs).
@@ -108,6 +64,19 @@ The dashboard can be accessed via the CLI:
 or by visiting the [Heroku apps web interface](http://heroku.com/myapps) and selecting the application in question. Select SourceNinja from the Add-ons menu.
 
 ![SourceNinja Add-ons Dropdown](http://cl.ly/3s3G3r412T1c282Q3Q1F/Screen%20shot%202012-03-12%20at%2011.11.02%20AM.png "SourceNinja Add-ons Dropdown")
+
+## Monitoring & Logging
+
+Stats and the current state of SourceNinja can be displayed via the CLI.
+
+    :::term
+    $ heroku sourceninja:command
+    example output
+
+SourceNinja activity can be observed within the Heroku log-stream by [[describe add-on logging recognition, if any]].
+
+    :::term
+    $ heroku logs -t | grep 'sourceninja pattern'
 
 ## Removing the add-on
 SourceNinja can be removed via the  CLI.

@@ -45,7 +45,7 @@ Update application dependencies with bundler.
 
 ### Development environment
 
-The gem automatically disables the pushing of developement and testing data to SourceNinja. This way the data received about gems will only refer to production data. In doing this, SourceNinja always reflects what gems are used in production.
+The gem automatically disables the pushing of development and testing data to SourceNinja. This way the data received about gems will only refer to production data. In doing this, SourceNinja always reflects what gems are used in production.
 
 ### Deploy changes
 
@@ -127,7 +127,7 @@ Once SourceNinja has been added, three configuration variables are set.
 
 `SOURCENINJA_URL` is a canonical URL used to access the SourceNinja service instance.
 
-`SOURCENINJA_EMAIL` is used by sourceninja for authentication. __Note: This should not be modified.__
+`SOURCENINJA_EMAIL` is used by SourceNinja for authentication. __Note: This should not be modified.__
 
 `SOURCENINJA_TOKEN` is the API token for your actual Application. This token should be safe guarded as it is in essence a uersname/password combination.
 

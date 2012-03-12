@@ -34,7 +34,7 @@ Next, create an initializer script in your application in `config/initializers`.
 
 Updated Magically
 -----------------
-Each time you push to production the sourceninja-ruby gem will be ran and data will be populated back to SourceNinja. If you visit your SourceNinja page you will be given a list of outdated gems.
+Each time you push to production the sourceninja-ruby gem will be run and data will be populated back to SourceNinja. If you visit your SourceNinja page you will be given a list of outdated gems.
 
 Support
 -------

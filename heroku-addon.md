@@ -3,7 +3,7 @@ layout: page
 title: SourceNinja Heroku Add-On
 ---
 
-[SourceNinja](http://addons.heroku.com/sourceninja) is an easy way to manage the open source software that your application uses. SourceNinja keeps you aware of updates to the open source software you use.
+[SourceNinja](http://www.sourceninja.com) is an easy way to manage the open source software that your application uses. SourceNinja keeps you aware of updates to the open source software you use.
 
 The key benefits of using SourceNinja are:
 
@@ -144,3 +144,4 @@ This can be confirmed using the `heroku config` command.
 Additional resources are available at:
 
 * [SourceNinja Docs](http://www.sourceninja.com/docs/)
+* [sourceNinja-ruby gem](sourceninja-ruby-gem)

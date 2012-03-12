@@ -24,9 +24,9 @@ First of all, you'll need the gem. It's at `http://github.com/SourceNinja/source
     
 	gem 'sourceninja-ruby', :git => 'https://github.com/SourceNinja/sourceninja-ruby'
 
-Before you can do anything with the sourceninja-ruby gem, you'll need to create your very own SourceNinja account (please read the notice above). Go ahead and do so at [http://sourceninja.com](http://sourceninja.com). Once created, you will need to create a product. This is the application you want SourceNinja to track. Once your create a product, you will notice two keys on the right hand column that you will need `ID` and the `PRODUCT API TOKEN`.
+Before you can do anything with the sourceninja-ruby gem, you'll need to create your very own SourceNinja account (please read the notice above). Go ahead and do so at [http://sourceninja.com](http://sourceninja.com). Once created, you will need to create a product. This is the application you want SourceNinja to track. Once your create a product, you will be directed to a page asking what your language your application is running. Select `Rails` from the menu on the left side. You will be presented with two keys.
 
-Next, create an initializer script in your application in `config/initializers`. There are two environment variables you will need to initialize, `SOURCENINJA_TOKEN` and `SOURCENINJA_PRODUCT_ID`.
+Next, create an initializer script in your application in `config/initializers`. There are two environment variables you will need to initialize, `SOURCENINJA_TOKEN` and `SOURCENINJA_PRODUCT_ID`. These are the keys that were given to you above.
 
 ### Contents of `config/initializers/sourceninja.rb`
 	ENV["SOURCENINJA_TOKEN"]      ||= "2cea0be98caf02e830ac2aadbe44e4ee"

@@ -3,78 +3,49 @@ layout: page
 title: SourceNinja Heroku Add-On
 ---
 
-[SourceNinja](http://addons.heroku.com/sourceninja) is an easy way to manage the open source software that your application uses.
+[SourceNinja](http://addons.heroku.com/sourceninja) is an easy way to manage the open source software that your application uses. SourceNinja keeps you aware of updates to the open source software you use.
 
-SourceNinja keeps you aware of updates to the open source software you use. Additionally, SourceNinja creates a hosted attribution page for your application.
+The key benefits of using SourceNinja are:
 
-SourceNinja is accessible via an API and has supported client libraries for Ruby*.
+* To understand what packages need to be updated.
+* To have actionable information to determine whether an update should take place.
+* Be alerted to updates to the Open Source packages.
 
-<div class="callout" markdown="1">
-A list of all plans available can be found [here](http://addons.heroku.com/sourceninja).
-</div>
+SourceNinja is accessible via an API and currently supports client libraries for Ruby.
 
 ## Installing the add-on
-To install the free version of SourceNinja add-on, simply run:
+To install the SourceNinja add-on, simply run:
 
     :::term
     $ heroku addons:add sourceninja
-    -----> Adding sourceninja to sharp-mountain-4005... done, v18 (free)
-
-Once SourceNinja has been added a `ADDON_CONFIG_NAME` setting will be available in the app configuration and will contain the [[variable purpose, i.e. "canonical URL used to access the newly provisioned SourceNinja service instance."]]. This can be confirmed using the `heroku config` command.
-
-    :::term
-    $ heroku config | grep ADDON_CONFIG_NAME
-    ADDON_CONFIG_NAME    => http://user:pass@instance.ip/resourceid
+    -----> Adding sourceninja to my-awesome-app... done, v18 (free)
 
 After installing SourceNinja the application should be configured to fully integrate with the add-on.
 
-### Local workstation setup
-
-[[If there is a local executable required (like for the memcache add-on) then include installation instructions. If not, omit entire section]]
-
-SourceNinja can be installed for use in a local development  environment.  Typically this entails [[installing the software | creating another version of the service]] and pointing the ADDON_CONFIG_NAME to this [[local | remote]] service.
-
-<table>
-  <tr>
-    <th>If you have...</th>
-    <th>Install with...</th>
-  </tr>
-  <tr>
-    <td>Mac OS X</td>
-    <td style="text-align: left"><code>brew install X</code></td>
-  </tr>
-  <tr>
-    <td>Windows</td>
-    <td style="text-align: left">Link to some installer</td>
-  </tr>
-  <tr>
-    <td>Ubuntu Linux</td>
-    <td style="text-align: left"><code>apt-get install X</code></td>
-  </tr>
-  <tr>
-    <td>Other</td>
-    <td style="text-align: left">Link to some raw package</td>
-  </tr>
-</table>
-
 ## Using with Rails 3.x
-
-[[Repeat this ##Rails 3.x sections for all other supported languages/frameworks including Java, Node.js, Python, Scala, Play!, Grails, Clojure. Heroku is a polyglot platform - don't box yourself into supporting a single language]]
+SourceNinja supports rails through the installation of a gem. Once the application is setup, you will need to add the sourceninja gem to your gemfile. This gem pushes all of the gem names and versions to SourceNinja. 
 
 Ruby on Rails applications will need to add the following entry into their `Gemfile` specifying the SourceNinja client library.
 
     :::ruby
-    gem 'sourceninja'
+    gem 'sourceninja-ruby', :git => 'https://github.com/SourceNinja/sourceninja-ruby'
 
 Update application dependencies with bundler.
 
     :::term
-    $ bundle install
-    sample output
+    $ bundle install    
+    Fetching https://github.com/SourceNinja/sourceninja-ruby
+    remote: Counting objects: 30, done.
+    remote: Compressing objects: 100% (20/20), done.
+    remote: Total 30 (delta 4), reused 28 (delta 2)
+    Unpacking objects: 100% (30/30), done.
+    ...
+    Your bundle is complete! Use `bundle show [gemname]` to see where a bundled gem is installed.
+    $
 
 ### Development environment
 
-When developing locally it is best to turn off the integration with SourceNinja to minimize dependencies on remote services. [[Describe how to stub/disable add-on integration - or specific steps required for local dev - for your service here.]].
+The gem automatically disables the pushing of developement and testing data to SourceNinja. This way the data received about gems will only refer to production data. In doing this, SourceNinja always reflects what gems are used in production.
 
 ### Deploy changes
 
@@ -122,60 +93,54 @@ SourceNinja activity can be observed within the Heroku log-stream by [[describe 
 
 ## Dashboard
 
-<div class="callout" markdown="1">
-For more information on the features available within the SourceNinja dashboard please see the docs at [mysite.com/docs](mysite.com/docs).
-</div>
+For more information on the features available within the SourceNinja dashboard please see the docs at [sourceninja.com/docs](http://sourceninja.com/docs).
 
-The SourceNinja dashboard allows you to [[describe dashboard features]].
+The SourceNinja dashboard allows you to identify open source projects and third party libraries that have newer versions available. One purpose of this is to make sure that no security issues are in the current versions of the open source packages you have installed.
 
-![SourceNinja Dashboard](http://i.imgur.com/FkuUw.png "SourceNinja Dashboard")
+![SourceNinja Dashboard](http://cl.ly/1j212T3m443U0c061h3i/Screen%20shot%202012-03-12%20at%2012.33.32%20PM.png "SourceNinja Dashboard")
 
 The dashboard can be accessed via the CLI:
 
     :::term
     $ heroku addons:open sourceninja
-    Opening sourceninja for sharp-mountain-4005…
+    Opening sourceninja for my-awesome-app...
 
 or by visiting the [Heroku apps web interface](http://heroku.com/myapps) and selecting the application in question. Select SourceNinja from the Add-ons menu.
 
-![SourceNinja Add-ons Dropdown](http://f.cl.ly/items/1B090n1P0d3W0I0R172r/addons.png "SourceNinja Add-ons Dropdown")
-
-## Troubleshooting
-
-If [[feature X]] does not seem to be [[common issue Y]] then 
-[[add specific commands to look for symptoms of common issue Y]].
-
-## Migrating between plans
-
-<div class="note" markdown="1">Application owners should carefully manage the migration timing to ensure proper application function during the migration process.</div>
-
-[[Specific migration process or any migration tips 'n tricks]]
-
-Use the `heroku addons:upgrade` command to migrate to a new plan.
-
-    :::term
-    $ heroku addons:upgrade sourceninja:newplan
-    -----> Upgrading sourceninja:newplan to sharp-mountain-4005... done, v18 ($49/mo)
-           Your plan has been updated to: sourceninja:newplan
+![SourceNinja Add-ons Dropdown](http://cl.ly/3s3G3r412T1c282Q3Q1F/Screen%20shot%202012-03-12%20at%2011.11.02%20AM.png "SourceNinja Add-ons Dropdown")
 
 ## Removing the add-on
-
 SourceNinja can be removed via the  CLI.
 
 <div class="warning" markdown="1">This will destroy all associated data and cannot be undone!</div>
 
     :::term
     $ heroku addons:remove sourceninja
-    -----> Removing sourceninja from sharp-mountain-4005... done, v20 (free)
-
-Before removing SourceNinja a data export can be performed by [[describe steps if export is available]].
+    -----> Removing sourceninja from my-awesome-app... done, v20 (free)
 
 ## Support
 
-All SourceNinja support and runtime issues should be logged with Heroku Support at https://support.heroku.com. Any non-support related issues or product feedback is welcome at [[your channels]].
+All SourceNinja support and runtime issues should be logged with Heroku Support at https://support.heroku.com. Any non-support related issues or product feedback is welcome at support at sourceninja.com.
+
+## Configuration Variables
+Once SourceNinja has been added, three configuration variables are set.
+
+`SOURCENINJA_URL` is a canonical URL used to access the SourceNinja service instance.
+
+`SOURCENINJA_EMAIL` is used by sourceninja for authentication. __Note: This should not be modified.__
+
+`SOURCENINJA_TOKEN` is the API token for your actual Application. This token should be safe guarded as it is in essence a uersname/password combination.
+
+`SOURCENINJA_PRODUCT_ID` is used by SourceNinja to identify your individual product.
+ 
+This can be confirmed using the `heroku config` command.
+
+    :::term
+    $ heroku config | grep ADDON_CONFIG_NAME
+    ADDON_CONFIG_NAME    => http://user:pass@instance.ip/resourceid
 
 ## Additional resources
 
 Additional resources are available at:
 
-* [Site docs](http://docs.sourceninja.com)
+* [SourceNinja Docs](http://www.sourceninja.com/docs/)

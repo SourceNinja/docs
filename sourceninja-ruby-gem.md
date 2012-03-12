@@ -45,3 +45,44 @@ Feel free to email us at support at sourceninja dot com if you have any question
 
 
 
+
+### SourceNinja configuration script
+
+Create a file for the configuration variables for the sourceninja-ruby gem. The examples use `/config/initializers/sourceninja.rb`
+
+Contents of `config/initializers/sourceninja.rb`
+    ENV["SOURCENINJA_TOKEN"]      ||= "07b86556dbac8cb5977ab304a5dad1ce"
+    ENV["SOURCENINJA_PRODUCT_ID"] ||= "3a331b4f-5503-437f-829a-5c1a4715d3e7"
+
+Deploy the SourceNinja configuration to Heroku:
+
+    :::term
+    $ git add config/initializers/sourceninja.rb
+    $ git commit -a -m "Adding sourceninja config"
+    $ git push heroku master
+    …
+    -----> Heroku receiving push
+    -----> Launching... done, v3
+           http://my-awesome-app.herokuapp.com deployed to Heroku
+
+    To git@heroku.com:my-awesome-app.git
+     * [new branch]      master -> master
+
+Configuration of the add-on can be confirmed by running:
+
+    :::term
+    $ heroku run confirmation command
+    
+[[On Heroku, configuration is managed via configuration variables. Please update client libraries to follow this pattern. No configuration files with sensitive information should ever be required within the application source and required config values should be read in from the ENV by supported libraries.]]
+
+Feature 1
+
+[[Describe how to use/integrate feature 1 from Ruby on Rails]]
+
+Feature 2
+
+[[Describe how to use/integrate feature 2 from Ruby on Rails]]
+
+
+
+

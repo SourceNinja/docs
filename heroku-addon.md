@@ -13,6 +13,12 @@ The key benefits of using SourceNinja are:
 
 SourceNinja is accessible via an API and currently supports client libraries for Ruby.
 
+## TL;DR
+1. `heroku addons:add sourceninja`
+2. edit `Gemfile`; add line `gem 'sourceninja-ruby', :git => 'https://github.com/SourceNinja/sourceninja-ruby'`
+3. `bundle install`
+4. `git push heroku`
+
 ## Installing the add-on
 To install the SourceNinja add-on, simply run:
 
@@ -20,7 +26,7 @@ To install the SourceNinja add-on, simply run:
     $ heroku addons:add sourceninja
     -----> Adding sourceninja to my-awesome-app... done, v18 (free)
 
-After installing SourceNinja the application should be configured to fully integrate with the add-on.
+After installing the SourceNinja add-on the application is configured, but will require the installation of the sourceninja-gem.
 
 ## Using with Rails 3.x
 SourceNinja supports rails through the installation of a gem. Once the application is setup, you will need to add the sourceninja gem to your gemfile. This gem pushes all of the gem names and versions to SourceNinja. 
@@ -107,6 +113,11 @@ This can be confirmed using the `heroku config` command.
     :::term
     $ heroku config | grep ADDON_CONFIG_NAME
     ADDON_CONFIG_NAME    => http://user:pass@instance.ip/resourceid
+
+## Debugging
+The sourceninja-ruby gem uses DEBUG level... Add with the following:
+
+    heroku config:add LOG_LEVEL=DEBUG
 
 ## Additional resources
 

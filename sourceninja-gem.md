@@ -14,32 +14,40 @@ SourceNinja is an awesome service that allows you to stay informed of updates to
 
 Visit [SourceNinja](http://sourceninja.com) to learn more.
 
-What is sourceninja-ruby
+What is the sourceninja gem
 ------------------------
-sourceninja-ruby is a gem that can be included in your rails application to allow seamless integration with SourceNinja. sourceninja-ruby will send all of your gem files and versions to SourceNinja to begin managing your open source libraries.
+sourceninja is a gem that can be included in your rails application to allow seamless integration with SourceNinja. The sourceninja gem will send all of your gem files and versions to SourceNinja to begin managing your open source libraries.
 
 Getting Started
 ---------------
 First of all, you'll need the gem. It's at `http://github.com/SourceNinja/sourceninja-ruby`. If you're using Bundler, just add the following to your `Gemfile`.
     
-	gem 'sourceninja-ruby', :git => 'https://github.com/SourceNinja/sourceninja-ruby'
+	gem 'sourceninja', :git => 'https://github.com/SourceNinja/sourceninja-ruby'
 
 Of course, as always, when you edit your Gemfile:
 	bundle install
 
-Before you can do anything with the sourceninja-ruby gem, you'll need to create your very own SourceNinja account (please read the notice above). Go ahead and do so at [http://sourceninja.com](http://sourceninja.com). Once created, you will need to create a product. This is the application you want SourceNinja to track. 
+Before you can do anything with the sourceninja gem, you'll need to create your very own SourceNinja account (please read the notice above). Go ahead and do so at [http://sourceninja.com](http://sourceninja.com). Once created, you will need to create a product. This is the application you want SourceNinja to track. 
 
 Once your create a product, you will be directed to a page asking what language your application is running. Select `Rails` from the menu on the left side. You will be presented with two keys that you will need for the rest of the installation.
 
-Create an initializer script in `config/initializers`. Add the two keys that were given to you above.
+You will then need to setup two environement variables in production, `ENV["SOURCENINJA_TOKEN"]` and `ENV["SOURCENINJA_PRODUCT_ID"]`. You could set these up in a configuration file that is only used in production, however, that is not suggested. You should setup the enviornement variables according to your hosting documentation.
+
+Updated Magically in Production
+-----------------
+Now each time you push to production the sourceninja gem will be run and data will be populated back to SourceNinja. If you visit your SourceNinja page you will be given a list of outdated gems.
+
+The sourceninja data is populated whenever the app is initilized.
+
+Testing Locally
+---------------
+If you would like to test if SourceNinja is getting pushed your gems locally, you will want to create an initializer script to set the variables.
 
 ### Contents of `config/initializers/sourceninja.rb`
 	ENV["SOURCENINJA_TOKEN"]      ||= "2cea0be98caf02e830ac2aadbe44e4ee"
 	ENV["SOURCENINJA_PRODUCT_ID"] ||= "fb89e066-b48c-40c3-81b4-a34a5b60a654"
 
-Updated Magically
------------------
-Each time you push to production the sourceninja-ruby gem will be run and data will be populated back to SourceNinja. If you visit your SourceNinja page you will be given a list of outdated gems.
+Upon doing this, each time you start the rails server locally the data will be pushed. If you want to have two SourceNinja apps, one for production and one for developement, this is a good way to do it.
 
 Support
 -------
@@ -53,7 +61,7 @@ Feel free to email us at support at sourceninja dot com if you have any question
 
 ### SourceNinja configuration script
 
-Create a file for the configuration variables for the sourceninja-ruby gem. The examples use `/config/initializers/sourceninja.rb`
+Create a file for the configuration variables for the sourceninja gem. The examples use `/config/initializers/sourceninja.rb`
 
 Contents of `config/initializers/sourceninja.rb`
     ENV["SOURCENINJA_TOKEN"]      ||= "07b86556dbac8cb5977ab304a5dad1ce"

@@ -15,20 +15,20 @@ SourceNinja is an awesome service that allows you to stay informed of updates to
 Visit [SourceNinja](http://sourceninja.com) to learn more.
 
 What is the sourceninja gem
-------------------------
+---------------------------
 The sourceninja gem is a gem that can be included in your rails application to allow seamless integration with SourceNinja. The sourceninja gem will send all of your gem files and versions to SourceNinja to begin managing your open source libraries.
 
 Getting Started
 ---------------
-1. Create a [SourceNinja](http://sourceninja.com) account, at this moment you'll still need an invite. 
+1. Create a [SourceNinja](http://sourceninja.com) account. Currently, you need to be part of our [alpha](http://www.sourceninja.com/sign-up.html).
 
-2. Log into SourceNinja and create a product. This is the product that will be paired with your application.
+2. Log into SourceNinja and create a product. The product you create will be paired with your application.
 
 3. After you create a product, you will be directed to a page asking what language your application is running. Select `Rails` from the menu on the left side. 
 
 4. You will be presented with two keys that you will need for the rest of the installation.
 
-3. Install the [SourceNinja](http://github.com/SourceNinja/sourceninja-ruby). You can do this by adding the following line to your Gemfile and running `bundle install`.
+5. Install the [sourceninja gem](http://github.com/SourceNinja/sourceninja-ruby). You can do this by adding the following line to your Gemfile and running `bundle install`.
     
 	gem 'sourceninja'
 

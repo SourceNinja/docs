@@ -20,16 +20,19 @@ The sourceninja gem is a gem that can be included in your rails application to a
 
 Getting Started
 ---------------
-First of all, you'll need the gem. It's at `http://github.com/SourceNinja/sourceninja-ruby`. If you're using Bundler, just add the following to your `Gemfile`.
+1. Create a [SourceNinja](http://sourceninja.com) account, at this moment you'll still need an invite. 
+
+2. Log into SourceNinja and create a product. This is the product that will be paired with your application.
+
+3. After you create a product, you will be directed to a page asking what language your application is running. Select `Rails` from the menu on the left side. 
+
+4. You will be presented with two keys that you will need for the rest of the installation.
+
+3. Install the [SourceNinja](http://github.com/SourceNinja/sourceninja-ruby). You can do this by adding the following line to your Gemfile and running `bundle install`.
     
-	gem 'sourceninja', :git => 'https://github.com/SourceNinja/sourceninja-ruby'
+	gem 'sourceninja'
 
-Of course, as always, when you edit your Gemfile:
-	bundle install
 
-Before you can do anything with the sourceninja gem, you'll need to create your very own SourceNinja account (please read the notice above). Go ahead and do so at [http://sourceninja.com](http://sourceninja.com). Once created, you will need to create a product. This is the application you want SourceNinja to track. 
-
-Once your create a product, you will be directed to a page asking what language your application is running. Select `Rails` from the menu on the left side. You will be presented with two keys that you will need for the rest of the installation.
 
 You will then need to setup two environment variables in production, `ENV["SOURCENINJA_TOKEN"]` and `ENV["SOURCENINJA_PRODUCT_ID"]`. You could set these up in a configuration file that is only used in production, however, that is not suggested. You should setup the environment variables according to your hosting documentation.
 

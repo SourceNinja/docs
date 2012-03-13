@@ -1,6 +1,6 @@
 ---
 layout: page
-title: sourceninja-ruby gem
+title: sourceninja gem
 ---
 
 Note
@@ -10,13 +10,13 @@ Note
 
 What is SourceNinja
 -------------------
-SourceNinja is an awesome service that allows you to stay informed of updates to the open source packages that your application uses. When a newer version of a package is released, SourceNinja gives you actionable information to help you determine whether you should upgrade to the newer package.
+SourceNinja is an awesome service that allows you to stay informed of updates to the open source packages that your application uses. When a newer version of a package is released, SourceNinja alerts you and gives you actionable information to help you determine whether you should upgrade to the newer package.
 
 Visit [SourceNinja](http://sourceninja.com) to learn more.
 
 What is the sourceninja gem
 ------------------------
-sourceninja is a gem that can be included in your rails application to allow seamless integration with SourceNinja. The sourceninja gem will send all of your gem files and versions to SourceNinja to begin managing your open source libraries.
+The sourceninja gem is a gem that can be included in your rails application to allow seamless integration with SourceNinja. The sourceninja gem will send all of your gem files and versions to SourceNinja to begin managing your open source libraries.
 
 Getting Started
 ---------------
@@ -41,61 +41,18 @@ The sourceninja data is populated whenever the app is initilized.
 
 Testing Locally
 ---------------
-If you would like to test if SourceNinja is getting pushed your gems locally, you will want to create an initializer script to set the variables.
+If you would like to test sourceninja gem locally, you will want to create an initializer script to set the variables.
 
 ### Contents of `config/initializers/sourceninja.rb`
-	ENV["SOURCENINJA_TOKEN"]      ||= "2cea0be98caf02e830ac2aadbe44e4ee"
-	ENV["SOURCENINJA_PRODUCT_ID"] ||= "fb89e066-b48c-40c3-81b4-a34a5b60a654"
+	ENV["SOURCENINJA_TOKEN"]      ||= "1cea0be98caf02e830ac2aadbe44e4ee"
+	ENV["SOURCENINJA_PRODUCT_ID"] ||= "fb89e064-b48c-d0c3-81x4-a34a5b60a654"
 
-Upon doing this, each time you start the rails server locally the data will be pushed. If you want to have two SourceNinja apps, one for production and one for developement, this is a good way to do it.
+Upon doing this, each time you start the rails server locally the data will be pushed. 
+
+You could also use these steps if you want to manage a production instance and a developement instance.
 
 Support
 -------
 Feel free to email us at support at sourceninja dot com if you have any questions or issues.
 
 ![sourceninja-ruby](assets/images/splinter.jpg)
-
-
-
-
-
-### SourceNinja configuration script
-
-Create a file for the configuration variables for the sourceninja gem. The examples use `/config/initializers/sourceninja.rb`
-
-Contents of `config/initializers/sourceninja.rb`
-    ENV["SOURCENINJA_TOKEN"]      ||= "07b86556dbac8cb5977ab304a5dad1ce"
-    ENV["SOURCENINJA_PRODUCT_ID"] ||= "3a331b4f-5503-437f-829a-5c1a4715d3e7"
-
-Deploy the SourceNinja configuration to Heroku:
-
-    :::term
-    $ git add config/initializers/sourceninja.rb
-    $ git commit -a -m "Adding sourceninja config"
-    $ git push heroku master
-    …
-    -----> Heroku receiving push
-    -----> Launching... done, v3
-           http://my-awesome-app.herokuapp.com deployed to Heroku
-
-    To git@heroku.com:my-awesome-app.git
-     * [new branch]      master -> master
-
-Configuration of the add-on can be confirmed by running:
-
-    :::term
-    $ heroku run confirmation command
-    
-[[On Heroku, configuration is managed via configuration variables. Please update client libraries to follow this pattern. No configuration files with sensitive information should ever be required within the application source and required config values should be read in from the ENV by supported libraries.]]
-
-Feature 1
-
-[[Describe how to use/integrate feature 1 from Ruby on Rails]]
-
-Feature 2
-
-[[Describe how to use/integrate feature 2 from Ruby on Rails]]
-
-
-
-

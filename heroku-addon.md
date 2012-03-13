@@ -124,4 +124,4 @@ The sourceninja-ruby gem uses DEBUG level... Add with the following:
 Additional resources are available at:
 
 * [SourceNinja Docs](http://www.sourceninja.com/docs/)
-* [sourceNinja-ruby gem](sourceninja-ruby-gem)
+* [sourceNinja-ruby gem](sourceninja-gem)

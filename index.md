@@ -7,5 +7,5 @@ Below are tutorials on how to integrate SourceNinja into your application and be
 
 [Heroku Add-On](heroku-addon)
 
-[sourceninja-ruby gem](sourceninja-ruby-gem)
+[sourceninja-ruby gem](sourceninja-gem)
 

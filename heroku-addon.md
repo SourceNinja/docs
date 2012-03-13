@@ -7,15 +7,15 @@ title: SourceNinja Heroku Add-On
 
 The key benefits of using SourceNinja are:
 
-* To understand what packages need to be updated.
-* To have actionable information to determine whether an update should take place.
-* Be alerted to updates to the Open Source packages.
+* Understanding what packages need to be updated.
+* Having actionable information to determine whether an update should take place.
+* Alerts when updates become available for Open Source packages.
 
 SourceNinja is accessible via an API and currently supports client libraries for Ruby.
 
 ## TL;DR
 1. `heroku addons:add sourceninja`
-2. edit `Gemfile`; add line `gem 'sourceninja-ruby', :git => 'https://github.com/SourceNinja/sourceninja-ruby'`
+2. add line `gem 'sourceninja-ruby', :git => 'https://github.com/SourceNinja/sourceninja-ruby'` to `Gemfile`;
 3. `bundle install`
 4. `git push heroku`
 

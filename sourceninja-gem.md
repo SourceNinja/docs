@@ -32,9 +32,7 @@ Getting Started
     
 	gem 'sourceninja'
 
-
-
-You will then need to setup two environment variables in production, `ENV["SOURCENINJA_TOKEN"]` and `ENV["SOURCENINJA_PRODUCT_ID"]`. You could set these up in a configuration file that is only used in production, however, that is not suggested. You should setup the environment variables according to your hosting documentation.
+6. Setup two environment variables in production, `ENV["SOURCENINJA_TOKEN"]` and `ENV["SOURCENINJA_PRODUCT_ID"]`. _Note: These variables could be set using a configuration file, similiar to the Testing Locally section. However, that is not suggested._ 
 
 Updated Magically in Production
 -----------------

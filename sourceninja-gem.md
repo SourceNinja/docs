@@ -55,9 +55,9 @@ If you would like to test sourceninja gem locally, you will want to create an in
 	ENV["SOURCENINJA_TOKEN"]      ||= "1cea0be98caf02e830ac2aadbe44e4ee"
 	ENV["SOURCENINJA_PRODUCT_ID"] ||= "fb89e064-b48c-d0c3-81x4-a34a5b60a654"
 
-Upon doing this, each time you start the rails server locally the data will be pushed. 
+Upon doing this, each time you start the rails server locally the data will be pushed. You could also use these steps if you want to manage a production instance and a development instance.
 
-You could also use these steps if you want to manage a production instance and a development instance.
+__Note: DO NOT DO THIS FOR PRODUCTION: No configuration files with sensitive information should ever be required within the application source and required config values should be read in from the ENV by supported libraries.__
 
 Support
 -------

@@ -70,16 +70,10 @@ or by visiting the [Heroku apps web interface](http://heroku.com/myapps) and sel
 
 ## Monitoring & Logging
 
-Stats and the current state of SourceNinja can be displayed via the CLI.
+SourceNinja activity can be observed within the Heroku log-stream by grepping for the string "Sourceninja":
 
     :::term
-    $ heroku sourceninja:command
-    example output
-
-SourceNinja activity can be observed within the Heroku log-stream by [[describe add-on logging recognition, if any]].
-
-    :::term
-    $ heroku logs -t | grep 'sourceninja pattern'
+    $ heroku logs -t | grep 'Sourceninja'
 
 ## Removing the add-on
 SourceNinja can be removed via the  CLI.

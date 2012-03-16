@@ -26,13 +26,20 @@ Getting Started
 
 3. After you create a product, you will be directed to a page asking what language your application is running. Select `Rails` from the menu on the left side. 
 
-4. You will be presented with two keys that you will need for the rest of the installation.
+4. You will be presented with two values, you'll need these two values later.
+    ```
+    SOURCENINJA_TOKEN="50a336d92da8ddea1ae0a6c0d06a172"
+    SOURCENINJA_PRODUCT_ID="477fcfa7-765a-4b91-b6a5-2ebe4c4f9d58"
+    ```
 
-5. Install the [sourceninja gem](http://github.com/SourceNinja/sourceninja-ruby). You can do this by adding the following line to your Gemfile and running `bundle install`.
-    
-	gem 'sourceninja'
+5. Install the [sourceninja gem](http://github.com/SourceNinja/sourceninja-ruby). You can do this by adding the following line to your Gemfile.
+    ```
+    gem "sourceninja", "~> 0.0.6"
+    ```
 
-6. Setup two environment variables in production, `ENV["SOURCENINJA_TOKEN"]` and `ENV["SOURCENINJA_PRODUCT_ID"]`. _Note: These variables could be set using a configuration file, similiar to the Testing Locally section. However, that is not suggested._ 
+6. Run `bundle install`.
+
+7. Set the environment variables ```SOURCENINJA_TOKEN``` and ```SOURCENINJA_PRODUCT_ID``` using the values from step 4.
 
 Updated Magically in Production
 -----------------

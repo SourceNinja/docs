@@ -15,9 +15,10 @@ SourceNinja is accessible via an API and currently supports client libraries for
 
 ## TL;DR 
 1. `heroku addons:add sourceninja`
-2. add line `gem 'sourceninja-ruby', :git => 'https://github.com/SourceNinja/sourceninja-ruby'` to `Gemfile`;
+2. add line `gem 'sourceninja'` to your `Gemfile`;
 3. `bundle install`
-4. `git push heroku`
+4. Commit your changes.
+5. `git push heroku`
 
 ## Installing the add-on
 To install the SourceNinja add-on, simply run:
@@ -26,7 +27,7 @@ To install the SourceNinja add-on, simply run:
     $ heroku addons:add sourceninja
     -----> Adding sourceninja to my-awesome-app... done, v18 (free)
 
-Upon installation of the SourceNinja add-on the application is configured, but requires the installation of the SourceNinja gem to add your Open Source packages.
+Upon installation of the SourceNinja add-on the application is configured, but, requires the installation of the SourceNinja gem to add your Open Source packages.
 
 ## Using with Rails 3.x
 SourceNinja supports rails with use of the sourceninja gem which pushes all of your gem names and versions to sourceninja.
@@ -34,32 +35,28 @@ SourceNinja supports rails with use of the sourceninja gem which pushes all of y
 Ruby on Rails applications will need to add the following entry into their `Gemfile` specifying the SourceNinja client library.
 
     :::ruby
-    gem 'sourceninja-ruby', :git => 'https://github.com/SourceNinja/sourceninja-ruby'
+    gem 'sourceninja'
 
 Update application dependencies with bundler.
 
     :::term
-    $ bundle install    
-    Fetching https://github.com/SourceNinja/sourceninja-ruby
-    remote: Counting objects: 30, done.
-    remote: Compressing objects: 100% (20/20), done.
-    remote: Total 30 (delta 4), reused 28 (delta 2)
-    Unpacking objects: 100% (30/30), done.
+    $ bundle install
+    Fetching source index for https://rubygems.org/
+    ...
+    Installing sourceninja (0.0.6) 
     ...
     Your bundle is complete! Use `bundle show [gemname]` to see where a bundled gem is installed.
     $
 
 ### Development environment
-
 The gem automatically disables the pushing of development and testing data to SourceNinja. This way the data received about gems will only refer to production data. In doing this, SourceNinja always reflects what gems are used in production.
 
 ## Dashboard
-
 For more information on the features available within the SourceNinja dashboard please see the docs at [sourceninja.com/docs](http://sourceninja.com/docs).
 
 The SourceNinja dashboard allows you to identify open source projects and third party libraries that have newer versions available. One purpose of this is to make sure that no security issues are in the current versions of the open source packages you have installed.
 
-![SourceNinja Dashboard](http://cl.ly/1j212T3m443U0c061h3i/Screen%20shot%202012-03-12%20at%2012.33.32%20PM.png "SourceNinja Dashboard")
+![SourceNinja Dashboard](http://cl.ly/2t0t0h0m1b041t2E1P0A/Screen%20shot%202012-03-16%20at%2012.38.28%20PM.png "SourceNinja Dashboard")
 
 The dashboard can be accessed via the CLI:
 
@@ -100,19 +97,19 @@ All SourceNinja support and runtime issues should be logged with Heroku Support 
 ## Configuration Variables
 Once SourceNinja has been added, three configuration variables are set.
 
-`SOURCENINJA_URL` is a canonical URL used to access the SourceNinja service instance.
-
-`SOURCENINJA_EMAIL` is used by SourceNinja for authentication. __Note: This should not be modified.__
-
-`SOURCENINJA_TOKEN` is the API token for your actual Application. This token should be safe guarded as it is in essence a uersname/password combination.
+`SOURCENINJA_EMAIL` is used by SourceNinja for authentication. __Important: This should NOT be modified.__
 
 `SOURCENINJA_PRODUCT_ID` is used by SourceNinja to identify your individual product.
+
+`SOURCENINJA_TOKEN` is the API token for your actual Application. This token should be safe guarded as it is in essence a uersname/password combination.
  
 This can be confirmed using the `heroku config` command.
 
     :::term
-    $ heroku config | grep ADDON_CONFIG_NAME
-    ADDON_CONFIG_NAME    => http://user:pass@instance.ip/resourceid
+    $ heroku config | grep SOURCENINJA
+    SOURCENINJA_EMAIL      => app2884533@heroku.com
+    SOURCENINJA_PRODUCT_ID => d4b782e3-c952-4f44-cb14-df55416b0f98
+    SOURCENINJA_TOKEN      => 8c472ab4b8f8d10d29f725d30effd3d5
 
 ## Debugging
 The sourceninja-ruby gem uses DEBUG level... Add with the following:

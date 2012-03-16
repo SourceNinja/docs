@@ -92,7 +92,7 @@ SourceNinja can be removed via the  CLI.
 
 ## Support
 
-All SourceNinja support and runtime issues should be logged with Heroku Support at https://support.heroku.com. Any non-support related issues or product feedback is welcome at support at sourceninja.com.
+All SourceNinja support and run-time issues should be logged with Heroku Support at https://support.heroku.com. Any non-support related issues or product feedback is welcome at support at sourceninja.com.
 
 ## Configuration Variables
 Once SourceNinja has been added, three configuration variables are set.
@@ -101,7 +101,7 @@ Once SourceNinja has been added, three configuration variables are set.
 
 `SOURCENINJA_PRODUCT_ID` is used by SourceNinja to identify your individual product.
 
-`SOURCENINJA_TOKEN` is the API token for your actual Application. This token should be safe guarded as it is in essence a uersname/password combination.
+`SOURCENINJA_TOKEN` is the API token for your actual Application. This token should be safe guarded as it is in essence a username/password combination.
  
 This can be confirmed using the `heroku config` command.
 

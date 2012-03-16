@@ -63,4 +63,4 @@ Support
 -------
 Feel free to email us at support at sourceninja dot com if you have any questions or issues.
 
-![sourceninja-ruby](assets/images/splinter.jpg)
+![sourceninja-ruby](http://cl.ly/2x001f2y042U3b05143Z/Screen%20shot%202012-03-16%20at%202.51.05%20PM.png)

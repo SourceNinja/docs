@@ -66,7 +66,7 @@ The dashboard can be accessed via the CLI:
 
 or by visiting the [Heroku apps web interface](http://heroku.com/myapps) and selecting the application in question. Select SourceNinja from the Add-ons menu.
 
-![SourceNinja Add-ons Dropdown](http://cl.ly/3s3G3r412T1c282Q3Q1F/Screen%20shot%202012-03-12%20at%2011.11.02%20AM.png "SourceNinja Add-ons Dropdown")
+![SourceNinja Add-ons Dropdown](http://cl.ly/1Z3x0d1g302j0D28400A/DropDown.png "SourceNinja Add-ons Dropdown")
 
 ## Monitoring & Logging
 

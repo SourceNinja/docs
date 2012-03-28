@@ -19,3 +19,4 @@ Below are tutorials on how to integrate SourceNinja into your application and be
 
 [sourceninja-ruby gem](sourceninja-gem)
 
+[support](support)

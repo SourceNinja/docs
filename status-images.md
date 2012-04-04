@@ -29,3 +29,8 @@ Add the following to your README:
 
 ### RDoc
 	{<img src="https://app.sourceninja.com/status/[YOUR_PRODUCT_ID].png" />}[https://app.sourceninja.com/products/[YOUR_PRODUCT_ID]]
+
+### Example
+Here is what the status image looks like for the [sourceninja-ruby](sourceninja-gem) gem.
+
+[![Dependency Status](https://app.sourceninja.com/status/a78ca9a5-0a4a-4764-8639-87cc5a41948e.png)](https://app.sourceninja.com/products/a78ca9a5-0a4a-4764-8639-87cc5a41948e)

@@ -14,7 +14,7 @@ The key benefits of using SourceNinja are:
 Below are tutorials on how to integrate SourceNinja into your application and begin keeping your packages up-to-date.
 
 ## Integration Points
-The simpliest way to populate SourceNinja with your open source libraries and dependencies is by using an integration. SourceNinja provides integrations for both heroku (as an add-on) and Rails through a gem.
+The simpliest way to populate SourceNinja with your open source libraries and dependencies is by using an integration point. SourceNinja provides integrations for both heroku (as an add-on) and Ruby on Rails through a gem.
 
 [Heroku Add-On](heroku-addon)
 

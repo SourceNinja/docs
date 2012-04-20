@@ -7,18 +7,17 @@ title: sourceninja gem
 
 Note
 ----
-* This gem is currently alpha. __You need to be invited to [SourceNinja Alpha](http://www.sourceninja.com/sign-up.html) in order to use this gem__.
 * If you are using Heroku, please refer to the [Heroku Documentationn](heroku-addon) and please ignore this documentation.
 
 What is SourceNinja
 -------------------
 SourceNinja is an awesome service that allows you to stay informed of updates to the open source packages that your application uses. When a newer version of a package is released, SourceNinja alerts you and gives you actionable information to help you determine whether you should upgrade to the newer package.
 
-Visit [SourceNinja](http://sourceninja.com) to learn more.
+Visit [SourceNinja](http://www.sourceninja.com) to learn more.
 
 What is the sourceninja gem
 ---------------------------
-The sourceninja gem is a gem that can be included in your rails application to allow seamless integration with SourceNinja. The sourceninja gem will send all of your gem files and versions to SourceNinja to begin managing your open source libraries.
+The sourceninja gem can be included in your rails application to allow seamless integration with SourceNinja. The sourceninja gem will send all of your gem files and versions to SourceNinja to begin managing your open source libraries.
 
 Getting Started
 ---------------

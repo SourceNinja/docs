@@ -5,15 +5,9 @@ title: sourceninja gem
 
 [![Dependency Status](https://app.sourceninja.com/status/a78ca9a5-0a4a-4764-8639-87cc5a41948e.png)](https://app.sourceninja.com/products/a78ca9a5-0a4a-4764-8639-87cc5a41948e)
 
-Note
-----
-* If you are using Heroku, please refer to the [Heroku Documentationn](heroku-addon) and please ignore this documentation.
-
-What is SourceNinja
--------------------
-SourceNinja is an awesome service that allows you to stay informed of updates to the open source packages that your application uses. When a newer version of a package is released, SourceNinja alerts you and gives you actionable information to help you determine whether you should upgrade to the newer package.
-
-Visit [SourceNinja](http://www.sourceninja.com) to learn more.
+What This Guide Covers
+-------------------------
+This guide will help you integrate SourceNinja into your Ruby on Rails application. This only needs to be done once.
 
 What is the sourceninja gem
 ---------------------------
@@ -41,7 +35,7 @@ Getting Started
 
 6. Run `bundle install`.
 
-7. Set the environment variables ```SOURCENINJA_TOKEN``` and ```SOURCENINJA_PRODUCT_ID``` using the values from step 4.
+7. Set the environment variables ```SOURCENINJA_TOKEN``` and ```SOURCENINJA_PRODUCT_ID``` using the values from step 4. On Heroku, you can use the command `heroku config:add SOURCENINJA_TOKEN=XXX SOURCENINJA_PRODUCT_ID=XXX`
 
 Updated Magically in Production
 -----------------

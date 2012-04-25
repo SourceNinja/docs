@@ -15,7 +15,7 @@ The sourceninja gem can be included in your rails application to allow seamless 
 
 Getting Started
 ---------------
-1. Create a [SourceNinja](http://sourceninja.com) account. Currently, you need to be part of our [alpha](http://www.sourceninja.com/sign-up.html).
+1. Create a [SourceNinja](http://sourceninja.com) account.
 
 2. Log into SourceNinja and create a product. The product you create will be paired with your application.
 
@@ -29,19 +29,19 @@ Getting Started
 		SOURCENINJA_PRODUCT_ID="477fcfa7-765a-4b91-b6a5-2ebe4c4f9d58"
 
 
-5. Install the [sourceninja gem](http://github.com/SourceNinja/sourceninja-ruby). You can do this by adding the following line to your Gemfile.
+5. Install the [sourceninja gem](http://github.com/SourceNinja/sourceninja-ruby). You can do this by adding the following line to your `Gemfile`.
     
 		gem "sourceninja", "~> 0.0.6"
 
 6. Run `bundle install`.
 
-7. Set the environment variables ```SOURCENINJA_TOKEN``` and ```SOURCENINJA_PRODUCT_ID``` using the values from step 4. On Heroku, you can use the command `heroku config:add SOURCENINJA_TOKEN=XXX SOURCENINJA_PRODUCT_ID=XXX`
+7. Set the environment variables `SOURCENINJA_TOKEN` and `SOURCENINJA_PRODUCT_ID` using the values from step 4. On Heroku, you can use the command `heroku config:add SOURCENINJA_TOKEN=XXX SOURCENINJA_PRODUCT_ID=XXX`
 
 Updated Magically in Production
 -----------------
 Now each time you push to production the sourceninja gem will be run and data will be populated back to SourceNinja. If you visit your SourceNinja page you will be given a list of outdated gems.
 
-The sourceninja data is populated whenever the app is initialized.
+The SourceNinja data is populated whenever the app is initialized.
 
 Testing Locally
 ---------------

@@ -38,10 +38,10 @@ Getting Started
 
 8. Add the following code above your main function.
 
-```
-var sourceninja = require('sourceninja');
-sourceninja.core.kapow();
-```
+
+		var sourceninja = require('sourceninja');
+		sourceninja.core.kapow();
+
 
 Updated Magically in Production
 -----------------

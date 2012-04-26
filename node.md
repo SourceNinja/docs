@@ -36,6 +36,13 @@ Getting Started
 
 7. Set the environment variables ```SOURCENINJA_TOKEN``` and ```SOURCENINJA_PRODUCT_ID``` using the values from step 4. On Heroku, you can use the command `heroku config:add SOURCENINJA_TOKEN=XXX SOURCENINJA_PRODUCT_ID=XXX`
 
+8. Add the following code above your main function.
+
+```
+var sourceninja = require('sourceninja');
+sourceninja.core.kapow();
+```
+
 Updated Magically in Production
 -----------------
 Now each time you push to production the sourceninja module will report your node modules and versions back to SourceNinja. If you visit your SourceNinja product page you will be given a list of outdated modules.

@@ -34,13 +34,16 @@ Getting Started
 
 6. Run `npm install`.
 
-7. Set the environment variables ```SOURCENINJA_TOKEN``` and ```SOURCENINJA_PRODUCT_ID``` using the values from step 4. On Heroku, you can use the command `heroku config:add SOURCENINJA_TOKEN=XXX SOURCENINJA_PRODUCT_ID=XXX`
+7. Set the environment variables ```SOURCENINJA_TOKEN``` and ```SOURCENINJA_PRODUCT_ID``` using the values from step 4. On Heroku, you can use the command `heroku config:add SOURCENINJA_TOKEN=XXX SOURCENINJA_PRODUCT_ID=XXX`.  If you don't want to pass these parameters as enviroment variables you may pass them programaticly via the kapow function as demonstrated below.
 
 8. Add the following code above your main function.
 
 
 		var sourceninja = require('sourceninja');
 		sourceninja.core.kapow();
+		
+		// You can pass the product ID and token as parameters if you so desire.
+		// sourceninja.core.kapow("477fcfa7-765a-4b91-b6a5-2ebe4c4f9d58", "50a336d92da8ddea1ae0a6c0d06a172");		
 
 
 Updated Magically in Production
